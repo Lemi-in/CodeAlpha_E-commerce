@@ -88,7 +88,7 @@ header {
 .cart {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     background-color: var(--container-color);
     width: 360px;
     min-height: 100vh;
@@ -96,7 +96,10 @@ header {
     padding: 20px;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
+.cart.active {
+    right: 0;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 .cart-title{
     font-size: 1.5rem;
     font-weight: 600;
