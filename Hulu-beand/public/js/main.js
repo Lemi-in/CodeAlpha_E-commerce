@@ -202,3 +202,12 @@ function updateCartIcon() {
     // If totalQuantity is 0, hide the number by setting it to an empty string
     //cartIcon.innerText = totalQuantity > 0 ? totalQuantity : '';
 }
+
+// Clear Cart Items After Purchase
+function clearCart() {
+    var cartContent = document.getElementsByClassName('cart-content')[0];
+    cartContent.innerHTML = '';
+    updatetotal();
+    localStorage.removeItem('cartItems');
+
+}
