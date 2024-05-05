@@ -327,6 +327,7 @@ header {
         padding: 3rem 0 2rem;
     }
     .container {
+        max-width: 1000px;
         margin: 0 auto;
         width: 90%;
     }
@@ -387,7 +388,7 @@ header {
     }
    
     .container {
-
+        max-width: 300px;
         margin: 0 auto;
         width: 90%;
     }
@@ -396,27 +397,32 @@ header {
         height: 28vh;
         width: 100%;
 }
+    .shop{
+        margin-top: -500px;
+    }
 }
 @media (max-width: 360px){
    
     .cart {
         width: 100%;
     }
+    .home-page{
+        margin-top: 90px;
+    }
     
     .home-img {
-        margin-top: 0px;
-        height: 30vh;
+        height: 28vh;
         width: 100%;
 
     }
     .shop {
-        padding-bottom: 100px;
         margin-top: -500px;
+
     }
-    
     .container {
-        padding-bottom: 100px;
-        margin-top: -500px;
+        width: 100%;
+        margin: auto;
+       
     }
     
 }
