@@ -90,6 +90,12 @@ header {
     align-items: center;
     font-size: 0.8rem;
 }
+.home-page {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
 
 .cart {
     position: fixed;

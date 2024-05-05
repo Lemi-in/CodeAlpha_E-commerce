@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import Stripe from 'stripe';
-
+ 
 // Load environment variables
 dotenv.config();
 
