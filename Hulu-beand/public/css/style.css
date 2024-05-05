@@ -332,12 +332,12 @@ header {
         width: 90%;
     }
     .shop{
-        margin-top: -500px;
+        margin-top: -200px;
     }
     
     .home-img {
         margin-top: 100px;
-        height: 28vh;
+        height: 50vh;
         width: 100%;
     }
 }
@@ -393,7 +393,7 @@ header {
         width: 90%;
     }
     .home-img {
-        margin-top: 0px;
+        margin-top: 100px;
         height: 28vh;
         width: 100%;
 }
@@ -415,17 +415,12 @@ header {
         width: 100%;
 
     }
-    .shop {
-        margin-top: -500px;
-
-    }
     .container {
         width: 100%;
         margin: auto;
        
     }
-    
+    .shop{
+        margin-top: -500px;
+    }
 }
-
-
-
