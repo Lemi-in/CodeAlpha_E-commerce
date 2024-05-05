@@ -405,21 +405,21 @@ header {
     .cart {
         width: 100%;
     }
-    .home-page{
-        margin-top: 90px;
-    }
+  
     
     .home-img {
+     
         height: 28vh;
         width: 100%;
 
     }
     .container {
+        
         width: 100%;
         margin: auto;
        
     }
     .shop{
-        margin-top: -500px;
+        margin-top: -450px;
     }
 }
