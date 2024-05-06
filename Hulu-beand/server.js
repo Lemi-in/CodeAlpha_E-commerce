@@ -1,6 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import Stripe from 'stripe';
+import nodemailer from 'nodemailer';
+
  
 // Load environment variables
 dotenv.config();
@@ -62,6 +64,49 @@ app.post('/stripe-checkout', async (req, res) => {
 
     res.json(session.url);
 });
+
+
+// Nodemailer stuff
+const email_address = process.env.EMAIL_ADDRESS;
+const email_password = process.env.EMAIL_PASSWORD;
+
+const transporter = nodemailer.createTransport({
+    service: 'Gmail', // Change this to your email provider (e.g., 'Gmail', 'Outlook', 'Yahoo', etc.)
+    auth: {
+        user: email_address, // Change this to your email address
+        pass: email_password   // Change this to your email password or app-specific password
+    }
+});
+
+// Body parser middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Handle form submission and send email
+app.post('/send-email', (req, res) => {
+    const { name, email, message } = req.body;
+
+    // Email content
+    const mailOptions = {
+        from: 'lemesaelias@gmail.com', // Sender email address
+        to: 'lemesaelias@gmail.com', // Recipient email address
+        subject: 'New Message from Contact Form', // Email subject
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}` // Email body
+    };
+
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error sending email:', error);
+            res.status(500).send('Error sending email');
+        } else {
+            console.log('Email sent:', info.response);
+            res.status(200).send('Email sent successfully');
+        }
+    });
+});
+
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
