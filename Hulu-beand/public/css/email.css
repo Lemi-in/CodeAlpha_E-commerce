@@ -1,0 +1,124 @@
+/* Style for the success message container */
+.success-message {
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+}
+
+.success-message h1 {
+    color: rgb(27, 238, 27);
+}
+
+.success-message p {
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.success-message a {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: none;
+}
+
+.success-message a:hover {
+    text-decoration: underline;
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 400px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .container > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .container > div {
+        width: 100%;
+    }
+
+    .footer ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .footer ul li {
+        margin: 0 5px;
+    }
+
+    .footer h4 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .footer ul li a {
+        font-size: 14px;
+    }
+}

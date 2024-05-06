@@ -71,12 +71,13 @@ const email_address = process.env.EMAIL_ADDRESS;
 const email_password = process.env.EMAIL_PASSWORD;
 
 const transporter = nodemailer.createTransport({
-    service: 'Gmail', // Change this to your email provider (e.g., 'Gmail', 'Outlook', 'Yahoo', etc.)
+    service: 'Gmail',
     auth: {
-        user: email_address, // Change this to your email address
-        pass: email_password   // Change this to your email password or app-specific password
+        user: email_address, // Your Gmail email address
+        pass: email_password   // Your Gmail app-specific password
     }
 });
+
 
 // Body parser middleware
 app.use(express.urlencoded({ extended: true }));

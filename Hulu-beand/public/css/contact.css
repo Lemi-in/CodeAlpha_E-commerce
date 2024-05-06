@@ -19,20 +19,31 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #1e1e2e;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 1px 4px hsla(0,0% , 98%, 0.1);
+    
 }
 
 .head{
     color: #fff;
+    margin-top: 100px;
 }
 
 .logo {
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
+    font-family: cursive;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffd700 40%, #ffff00 50%, #ff4500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 
 .nav {
     display: flex;
@@ -71,6 +82,7 @@ header {
 }
 
 .contact-form {
+    margin-bottom: 100px;
     background-color: #2a07c5;
     padding: 20px;
     border-radius: 5px;
@@ -183,6 +195,15 @@ header {
 
     .footer .container > div {
         width: 100%;
+    }
+    .contact-form {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 780px) {
+    .contact-form {
+        margin-bottom: 100px;
     }
 }
 
