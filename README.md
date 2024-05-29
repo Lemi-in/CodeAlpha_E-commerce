@@ -1,5 +1,3 @@
-Here's a `README.md` for your "Hulu Beand" project:
-
 ---
 
 # Hulu Beand
